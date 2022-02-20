@@ -18,7 +18,7 @@
   @endif
 <center>
   <form action="{{route('ebooks.search')}}" method="GET">
-    <input type="text" class="form-group col-sm-8 " name="search" placeholder="Check ebooks here..." value="{{ old('search') }}">
+    <input type="text" class="form-group col-sm-8 " name="keyword" placeholder="Check ebooks here..." value="{{ old('search') }}">
     <input type="submit" class="btn btn-primary" value="Search">
   </form>
 <br>    
