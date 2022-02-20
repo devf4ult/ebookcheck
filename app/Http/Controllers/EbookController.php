@@ -109,9 +109,9 @@ class EbookController extends Controller
 
     public function searchAdminVersion(Request $request) 
     {
-        $search = $request->search;
-        $data = Ebooks::where('name', 'LIKE', "%" .$search. "%")
-                ->orWhere('category', 'LIKE', "%" .$search. "%")
+        $keyword = $request->keyword;
+        $data = Ebooks::where('name', 'LIKE', "%" .$keyword. "%")
+                ->orWhere('category', 'LIKE', "%" .$keyword. "%")
                 ->paginate(5);
 
         return view('ebooks_index', compact('data'));
@@ -119,9 +119,9 @@ class EbookController extends Controller
 
     public function search(Request $request) 
     {
-        $search = $request->search;
-        $data = Ebooks::where('name', 'LIKE', "%" .$search. "%")
-                ->orWhere('category', 'LIKE', "%" .$search. "%")
+        $keyword = $request->keyword;
+        $data = Ebooks::where('name', 'LIKE', "%" .$keyword. "%")
+                ->orWhere('category', 'LIKE', "%" .$keyword. "%")
                 ->paginate(5);
 
         return view('welcome', compact('data'));
