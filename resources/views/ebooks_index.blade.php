@@ -20,7 +20,7 @@
   <form action="{{route('ebooks.searchAdminVersion')}}" method="GET">
   <a href="{{route('ebooks.create')}}">
     <button type="button" class="btn btn btn-success">Add</button></a>
-    <input type="text" class="form-group col-sm-8 " name="search" value="{{ old('search') }}">
+    <input type="text" class="form-group col-sm-8 " name="keyword" value="{{ old('search') }}">
     <input type="submit" class="btn btn-primary" value="Search">
   </form>
 
